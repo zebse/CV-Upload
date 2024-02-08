@@ -1,51 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   min-height: 100vh;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   background-color: #ddd;
 }
 
-.container{
+.container {
   position: relative;
   max-width: 1000px;
   background-color: #fff;
   width: 100%;
   padding: 25px;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0 , 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.container header{
+.container header {
   font-size: 2rem;
-  color:#333;
+  color: #333;
   text-align: center;
   font-weight: 500;
+  text-transform: capitalize;
 }
 
-.container .form{
+.container .form {
   margin-top: 30px;
 }
 
-.form .input-box{
+.form .input-box {
   width: 100%;
   margin-top: 20px;
 }
 
-.form :where(.sex input, .sex label){
+.form :where(.sex input, .sex label) {
   cursor: pointer;
 }
 
-.select-sec select{
+.select-sec select {
   width: 100%;
   height: 100%;
   outline: none;
@@ -54,12 +56,14 @@ body{
   color: #333;
 }
 
-.input-box label{
+.input-box label {
   color: #333;
   font-weight: bold;
+  font-size: 1.2rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.form :where(.input-box input, .select-sec){
+.form :where(.input-box input) {
   position: relative;
   height: 35px;
   width: 100%;
@@ -71,28 +75,81 @@ body{
   padding: 0 15px;
 }
 
-.form .column{
+.form .column {
   display: flex;
   column-gap: 15px;
 }
 
-.address :where(input, .select-sec){
+.address :where(input, .select-sec) {
   margin-top: 20px;
 }
 
-.input-box input:focus{
-    border: 2px solid #007bff;
+.input-box input:focus {
+  border: 2px solid #007bff;
 }
 
-select:focus{
-    border: 2px solid#007bff;
+.btn{
+  margin-top: 13px;
+  width: 120px;
+  padding: 5px;
+  border: 2px solid #007bff;
+  border-radius: 7px;
+  font-size: 1.2rem;
+  margin-right: 20px;
+  background-color: #ced4da;
 }
 
-@media (max-width: 768px){
-  .form .column{
-    flex-direction: column-reverse;
+#sexlabel{
+  margin-bottom: 13px;
+  display: block;
+}
+
+label{
+  user-select: none;
+}
+input[type="radio"] {
+  display: none;
+}
+
+input[type = "radio"] + label {
+  z-index: 10;
+  margin: 0 10px 10px 0;
+  position: relative;
+  color: #ced4da;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin-right: 35px;
+}
+
+input[type = "radio"]:checked + label {
+  color: black;
+  background-color: #ced4da;
+  font-size: 1.07rem;
+  border: 2px solid #007bff;
+  font-style: italic;
+}
+
+input[type = "radio"] + label {
+  padding: 3px 15px;
+  border-radius: 8px;
+}
+
+::placeholder{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .form .column {
+    /* flex-direction: column-reverse; */
+    display: block;
   }
-  select{
+
+  select {
     /* max-width: calc(100% - 20px); */
     max-width: 200px;
     font-size: 1rem;

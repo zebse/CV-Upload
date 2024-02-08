@@ -11,58 +11,57 @@
 <body>
     <section class="container">
         <header>Registration form</header>
-        <form action="#" class="form">
+        <form class="form" id="form1">
             <div class="column">
                 <div class="input-box">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" placeholder="First name">
+                    <input type="text" id="fname" placeholder="First name" name="fname" required>
+                    <p id="name1" style="color: red; display: none;"></p>
                 </div>
 
                 <div class="input-box">
                     <label for="mname">Middle Name</label>
-                    <input type="text" id="mname" placeholder="Middle name">
+                    <input type="text" id="mname" placeholder="Middle name" name="mname" required>
+                    <p id="name2" style="color: red; display: none;"></p>
                 </div>
 
                 <div class="input-box">
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" placeholder="Last name">
+                    <input type="text" id="lname" placeholder="Last name" name="lname" required>
+                    <p id="name3" style="color: red; display: none;"></p>
                 </div>
             </div>
 
             <div class="column">
                 <div class="input-box">
-                    <label for="sex">Gender</label>
-                    <div class="column">
-                        <div class="select-sec">
-                            <select name="" id="sex">
-                                <option value="" hidden>Gender</option>
-                                <option value="">Male</option>
-                                <option value="">Female</option>
-                            </select>
-                        </div>
-                    </div>
+                    <label id="sexlabel">Gender </label>
+                    <input type='radio' id='male' value="male" checked='checked' name='radio' required>
+                    <label for='male'>Male</label>
+                    <input type='radio' id='female' name='radio' required>
+                    <label for='female'>Female</label>
                 </div>
-
                 <div class="input-box">
                     <label for="birth_date">Date of Birth (GC)</label>
-                    <input type="date" id="birth_date" placeholder="Birth date">
+                    <input type="date" id="birth_date" placeholder="Birth date" required>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" placeholder="Phone number" required>
                 </div>
             </div>
 
             <div class="column">
                 <div class="input-box">
-                    <label for="phone">Phone number</label>
-                    <input type="text" id="phone" placeholder="Phone number">
-                </div>
-
-                <div class="input-box">
-                    <label for="phone2">Alternet phone number</label>
+                    <label for="phone2">Alternate phone number</label>
                     <input type="text" id="phone2" placeholder="Alternate phone number">
                 </div>
-
                 <div class="input-box">
                     <label for="email">Email address</label>
-                    <input type="text" id="email" placeholder="Email address">
+                    <input type="email" id="email" placeholder="Email address">
+                </div>
+                <div class="input-box">
+                    <label for="residance">Current Residance</label>
+                    <input type="text" id="residance" placeholder="Current Address" required>
                 </div>
 
             </div>
@@ -72,8 +71,8 @@
                     <label for="martial">Martial status</label>
                     <div class="column">
                         <div class="select-sec">
-                            <select name="" id="martial">
-                                <option value="" hidden>Martial Status</option>
+                            <select name="" id="martial" style="width: 300px;" required>
+                                <option hidden>Martial Status</option>
                                 <option value="married">Married</option>
                                 <option value="single">Single</option>
                                 <option value="separated">Separated</option>
@@ -83,98 +82,113 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="input-box">
-                    <label for="residance">Current Residance</label>
-                    <input type="text" id="residance" placeholder="Current Address">
+                    <label for="education">Current Educational Status</label>
+                    <div class="column">
+                        <div class="select-sec">
+                            <select name="" id="education" style="width: 300px;">
+                                <option value="" hidden>Education Status</option>
+                                <option value="">Certeficate</option>
+                                <option value="">Advanced Diploma</option>
+                                <option value="">Diploma/Level-IV/10+3/</option>
+                                <option value="">Diploma (Associate Degree)</option>
+                                <option value="">Bachelor of Laws</option>
+                                <option value="">Bachelors</option>
+                                <option value="">Bachelor’s Degree in Science</option>
+                                <option value="">Masters of Laws</option>
+                                <option value="">Masters</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="education">Field of Study</label>
+                    <div class="column">
+                        <div class="select-sec">
+                            <select name="" id="study" style="width: 300px;">
+                                <option value="" hidden>Field of Study</option>
+                                <option value="">Computer Science</option>
+                                <option value="">Information Technology</option>
+                                <option value="">Accounting and Finance</option>
+                                <option value="">Accounting </option>
+                                <option value="">Management </option>
+                                <option value="">Management Information Systems</option>
+                                <option value="">Public Health</option>
+                                <option value="">Statistics</option>
+                                <option value="">Travel/Tourism Management</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-
-            <div>
-                <div class="column">
-                    <div class="input-box">
-                        <label for="education">Current Educational Status</label>
-                        <div class="column">
-                            <div class="select-sec">
-                                <select name="" id="education">
-                                    <option value="" hidden>Education Status</option>
-                                    <option value="">Certeficate</option>
-                                    <option value="">Advanced Diploma</option>
-                                    <option value="">Diploma/Level-IV/10+3/</option>
-                                    <option value="">Diploma (Associate Degree)</option>
-                                    <option value="">Bachelor of Laws</option>
-                                    <option value="">Bachelors</option>
-                                    <option value="">Bachelor’s Degree in Science</option>
-                                    <option value="">Masters of Laws</option>
-                                    <option value="">Masters</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="education">Field of Study</label>
-                        <div class="column">
-                            <div class="select-sec">
-                                <select name="" id="education">
-                                    <option value="" hidden>Field of Study</option>
-                                    <option value="">Computer Science</option>
-                                    <option value="">Information Technology</option>
-                                    <option value="">Accounting and finance</option>
-                                    <option value="">Accounting </option>
-                                    <option value="">Management </option>
-                                    <option value="">Management Information Systems</option>
-                                    <option value="">Public Health</option>
-                                    <option value="">Statistics</option>
-                                    <option value="">Travel/Tourism Management</option>
-                                </select>
-                            </div>
+            <div class="column">
+                <div class="input-box">
+                    <label for="university">Graduated from</label>
+                    <div class="column">
+                        <div class="select-sec">
+                            <select name="" id="university" style="width: 300px;">
+                                <option value="" hidden>Select Uiversity</option>
+                                <option value="">Adama University</option>
+                                <option value="">Addis Ababa University</option>
+                                <option value="">Addis Ababa Science and Technology University</option>
+                                <option value="">Adama Science and Technology University</option>
+                                <option value="">Adigrat University</option>
+                                <option value="">Admas University College</option>
+                                <option value="">Ambo University</option>
+                                <option value="">Arba Minch University</option>
+                                <option value="">Arsi University</option>
+                                <option value="">Axum University</option>
+                                <option value="">Bahir Dar University</option>
+                                <option value="">Bule Hora University</option>
+                                <option value="">Debre Berhan University</option>
+                                <option value="">Debre Markos University</option>
+                                <option value="">Dembi Dolo University</option>
+                                <option value="">Dessie Teacher's Education College</option>
+                                <option value="">Dilla University</option>
+                                <option value="">Dire Dawa University</option>
+                                <option value="">Ethiopian Civil Service University</option>
+                                <option value="">Haramaya University</option>
+                                <option value="">Hawassa University</option>
+                                <option value="">JU</option>
+                                <option value="">UoG</option>
+                                <option value="">DBU</option>
+                            </select>
                         </div>
                     </div>
                 </div>
 
-                <div class="column">
-                    <div class="input-box">
-                        <label for="university">Institution</label>
-                        <div class="column">
-                            <div class="select-sec">
-                                <select name="" id="university">
-                                    <option value="" hidden>Select Uiversity</option>
-                                    <option value="">AAU</option>
-                                    <option value="">AAST</option>
-                                    <option value="">ASTU</option>
-                                    <option value="">JU</option>
-                                    <option value="">UoG</option>
-                                    <option value="">DBU</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-box">
-                        <label for="year">Year of Graduation</label>
-                        <input type="date" id="year" placeholder="Year of Graduation">
-                    </div>
-
-                    <div class="input-box">
-                        <label for="cgpa">CGPA</label>
-                        <input type="text" placeholder="CGPA" id="cgpa">
-                    </div>
+                <div class="input-box">
+                    <label for="year">Year of Graduation</label>
+                    <input type="date" id="year" placeholder="Year of Graduation">
                 </div>
-                <div class="column">
-                    <div class="input-box">
-                        <label for="exit">Exit exam score (graduates only)</label>
-                        <input type="text" name="exit" id="exit">
-                    </div>
 
-                    <div class="input-box">
-                        <label for="cv">Upload your CV</label>
-                        <input type="file">
-                    </div>
+                <div class="input-box">
+                    <label for="cgpa">Cummulative GPA</label>
+                    <input type="number" placeholder="CGPA" id="cgpa" min="1.75" max="4.00" step="0.01">
                 </div>
+            </div>
+            <div class="column">
+                <div class="input-box">
+                    <label for="exit">Exit exam score (graduates only)</label>
+                    <input type="text" name="exit" id="exit">
+                </div>
+
+                <div class="input-box">
+                    <label for="cv">Upload your CV</label>
+                    <input type="file">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+            <button type="submit" class="btn">Cancel</button>
         </form>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" />
+    <script src="script.js"></script>
 </body>
 
 </html>
