@@ -37,7 +37,7 @@
                     <label id="sexlabel">Gender </label>
                     <input type='radio' id='male' value="male" checked='checked' name='radio' required>
                     <label for='male'>Male</label>
-                    <input type='radio' id='female' name='radio' required>
+                    <input type='radio' id='female' value="female" name='radio' required>
                     <label for='female'>Female</label>
                 </div>
                 <div class="input-box">
@@ -53,11 +53,11 @@
             <div class="column">
                 <div class="input-box">
                     <label for="phone2">Alternate phone number</label>
-                    <input type="text" id="phone2" placeholder="Alternate phone number">
+                    <input type="tel" id="phone2" placeholder="Alternate phone number">
                 </div>
                 <div class="input-box">
                     <label for="email">Email address</label>
-                    <input type="email" id="email" placeholder="Email address">
+                    <input type="email" id="email" placeholder="Email address" required>
                 </div>
                 <div class="input-box">
                     <label for="residance">Current Residance</label>
@@ -86,7 +86,7 @@
                     <label for="education">Current Educational Status</label>
                     <div class="column">
                         <div class="select-sec">
-                            <select name="" id="education" style="width: 300px;">
+                            <select name="" id="education" style="width: 300px;" required>
                                 <option value="" hidden>Education Status</option>
                                 <option value="">Certeficate</option>
                                 <option value="">Advanced Diploma</option>
@@ -105,7 +105,7 @@
                     <label for="education">Field of Study</label>
                     <div class="column">
                         <div class="select-sec">
-                            <select name="" id="study" style="width: 300px;">
+                            <select name="" id="study" style="width: 300px;" required>
                                 <option value="" hidden>Field of Study</option>
                                 <option value="">Computer Science</option>
                                 <option value="">Information Technology</option>
@@ -127,7 +127,7 @@
                     <label for="university">Graduated from</label>
                     <div class="column">
                         <div class="select-sec">
-                            <select name="" id="university" style="width: 300px;">
+                            <select name="" id="university" style="width: 300px;" required>
                                 <option value="" hidden>Select Uiversity</option>
                                 <option value="">Adama University</option>
                                 <option value="">Addis Ababa University</option>
@@ -150,9 +150,24 @@
                                 <option value="">Ethiopian Civil Service University</option>
                                 <option value="">Haramaya University</option>
                                 <option value="">Hawassa University</option>
-                                <option value="">JU</option>
-                                <option value="">UoG</option>
-                                <option value="">DBU</option>
+                                <option value="">Jijiga University</option>
+                                <option value="">Jimma Teachers College</option>
+                                <option value="">Jimma University</option>
+                                <option value="">Jinka University</option>
+                                <option value="">Madda Walabu University</option>
+                                <option value="">Mekelle Institute of Technology</option>
+                                <option value="">Mekelle University</option>
+                                <option value="">Mizan–Tepi University</option>
+                                <option value="">New Generation University College</option>
+                                <option value="">Rift Valley University</option>
+                                <option value="">Royal College/Ethiopia</option>
+                                <option value="">St. Mary's University</option>
+                                <option value="">Unity University</option>
+                                <option value="">University of Gondar</option>
+                                <option value="">Wachemo University</option>
+                                <option value="">Wolaita Sodo University</option>
+                                <option value="">Wollega University</option>
+                                <option value="">Wollo University</option>
                             </select>
                         </div>
                     </div>
@@ -160,7 +175,7 @@
 
                 <div class="input-box">
                     <label for="year">Year of Graduation</label>
-                    <input type="date" id="year" placeholder="Year of Graduation">
+                    <input type="date" id="year" placeholder="Year of Graduation" required>
                 </div>
 
                 <div class="input-box">
@@ -170,25 +185,30 @@
             </div>
             <div class="column">
                 <div class="input-box">
-                    <label for="exit">Exit exam score (graduates only)</label>
-                    <input type="text" name="exit" id="exit">
+                    <label for="exit">Exit exam score </label>
+                    <input type="text" name="exit" id="exit" required>
                 </div>
 
                 <div class="input-box">
                     <label for="cv">Upload your CV</label>
+                    <input type="file" id = "cv" required>
+                    <p id="cverr" style="color: red; display: none;"></p>
+                    <p id="type" style="color: red; display: none;"></p>
+                </div>
+                <div class="input-box">
+                    <label for="certi">Certificate (if any) </label>
                     <input type="file">
                 </div>
             </div>
 
             <button type="submit" class="btn">Submit</button>
-            <button type="submit" class="btn">Cancel</button>
+            <button type="reset" class="btn">Cancel</button>
         </form>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"/>
     <script src="script.js"></script>
 </body>
-
 </html>

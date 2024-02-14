@@ -143,6 +143,10 @@ input[type = "radio"] + label {
   font-style: italic;
 }
 
+.input-error{
+  border: 1px solid red;
+}
+
 @media (max-width: 768px) {
   .form .column {
     /* flex-direction: column-reverse; */
@@ -151,8 +155,8 @@ input[type = "radio"] + label {
 
   select {
     /* max-width: calc(100% - 20px); */
-    max-width: 200px;
-    font-size: 1rem;
+    max-width: 75%;
+    font-size: 1.2rem;
     align-items: center;
   }
 }
