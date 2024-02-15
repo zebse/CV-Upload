@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,7 +16,7 @@
             <div class="column">
                 <div class="input-box">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" placeholder="First name" name="fname" required>
+                    <input type="text" id="fname" placeholder="First name" name="fname" required autofocus>
                     <p id="name1" style="color: red; display: none;"></p>
                 </div>
 
@@ -71,7 +72,7 @@
                     <label for="martial">Martial status</label>
                     <div class="column">
                         <div class="select-sec">
-                            <select name="" id="martial" style="width: 300px;" required>
+                            <select class="js-states form-control" name="" id="martial" style="width: 300px;" required>
                                 <option hidden>Martial Status</option>
                                 <option value="married">Married</option>
                                 <option value="single">Single</option>
@@ -86,7 +87,8 @@
                     <label for="education">Current Educational Status</label>
                     <div class="column">
                         <div class="select-sec">
-                            <select name="" id="education" style="width: 300px;" required>
+                            <select class="js-states form-control" name="" id="education" style="width: 300px;"
+                                required>
                                 <option value="" hidden>Education Status</option>
                                 <option value="">Certeficate</option>
                                 <option value="">Advanced Diploma</option>
@@ -102,20 +104,20 @@
                     </div>
                 </div>
                 <div class="input-box">
-                    <label for="education">Field of Study</label>
+                    <label for="study">Field of Study</label>
                     <div class="column">
                         <div class="select-sec">
-                            <select name="" id="study" style="width: 300px;" required>
+                            <select class="js-states form-control" name="" id="study" style="width: 300px;" required>
                                 <option value="" hidden>Field of Study</option>
-                                <option value="">Computer Science</option>
-                                <option value="">Information Technology</option>
-                                <option value="">Accounting and Finance</option>
-                                <option value="">Accounting </option>
-                                <option value="">Management </option>
-                                <option value="">Management Information Systems</option>
-                                <option value="">Public Health</option>
-                                <option value="">Statistics</option>
-                                <option value="">Travel/Tourism Management</option>
+                                <option value="Computer Science">Computer Science</option>
+                                <option value="IT">Information Technology</option>
+                                <option value="Accounting and Finance">Accounting and Finance</option>
+                                <option value="Accounting">Accounting </option>
+                                <option value="Management">Management </option>
+                                <option value="MIS">Management Information Systems</option>
+                                <option value="Public Health">Public Health</option>
+                                <option value="Statistics">Statistics</option>
+                                <option value="Travel and Tourism">Travel/Tourism Management</option>
                             </select>
                         </div>
                     </div>
@@ -127,7 +129,8 @@
                     <label for="university">Graduated from</label>
                     <div class="column">
                         <div class="select-sec">
-                            <select name="" id="university" style="width: 300px;" required>
+                            <select class="js-states form-control" name="" id="university" style="width: 300px;"
+                                required>
                                 <option value="" hidden>Select Uiversity</option>
                                 <option value="">Adama University</option>
                                 <option value="">Addis Ababa University</option>
@@ -186,18 +189,19 @@
             <div class="column">
                 <div class="input-box">
                     <label for="exit">Exit exam score </label>
-                    <input type="text" name="exit" id="exit" required>
+                    <input type="number" name="exit" id="exit" placeholder="Exit Exam Score" max="100" required>
                 </div>
 
                 <div class="input-box">
                     <label for="cv">Upload your CV</label>
-                    <input type="file" id = "cv" required>
+                    <input type="file" id="cv" required>
                     <p id="cverr" style="color: red; display: none;"></p>
                     <p id="type" style="color: red; display: none;"></p>
                 </div>
                 <div class="input-box">
                     <label for="certi">Certificate (if any) </label>
-                    <input type="file">
+                    <input type="file" id="certi">
+                    <p id="certierror" style="color: red; display: none;"></p>
                 </div>
             </div>
 
@@ -207,8 +211,7 @@
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

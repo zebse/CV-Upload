@@ -1,9 +1,10 @@
 $(document).ready(function () {
-  $('#university').chosen();
-  $('#education').chosen();
-  $('#study').chosen();
-  $('#martial').chosen();
+  $('#university').select2();
+  $('#education').select2();
+  $('#study').select2();
+  $('#martial').select2();
 });
+
 
 const form = document.getElementById("form1");
 const error1 = document.getElementById("name1");
@@ -15,6 +16,7 @@ const lname = document.getElementById("lname");
 const cv = document.getElementById("cv");
 const cverror = document.getElementById("cverr");
 const typeError = document.getElementById("type");
+const certiError = document.getElementById("certierror");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -30,7 +32,7 @@ form.addEventListener("submit", function (event) {
     error1.scrollIntoView({ behavior: 'smooth', block: 'start' });
     fname.classList.add('input-error');
     return;
-  }else{
+  } else {
     error1.textContent = "";
     error1.style.display = "none";
     fname.classList.remove('input-error');
@@ -52,7 +54,7 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
-  //CV file size valdation
+  //CV file size validation
   const file = cv.files[0];
   const fileSize = file.size / (1024 * 1024);
   if (fileSize > 5) {
@@ -77,6 +79,6 @@ form.addEventListener("submit", function (event) {
   alert('form submitted Successfully!');
 });
 
-function validateFirstName(){
-  
+function validateFirstName() {
+
 }
